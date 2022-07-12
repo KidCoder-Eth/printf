@@ -29,7 +29,6 @@ int _putchar(char c)
 	}
 	return (1);
 }
-<<<<<<< HEAD
 /**
  * _puts - prints a string to stdout
  * @str: pointer ot the string to print
@@ -45,6 +44,8 @@ int _puts(char *str)
 	register int i;
 
 	for (i = 0; str[i] != '\0'; i++)
-		_putchar(str[i]);
+		{
+			_putchar(str[i]);
+		}
 	return (i);
 }
