@@ -3,6 +3,9 @@
 
 #include <stdlib.h>
 #include <stdarg.h>
+#include <stdio.h>
+#include <limits.h>
+#include <unistd.h>
 
 /**
  * struct flags - struct containing flaags to "turn on"
@@ -19,7 +22,7 @@ typedef struct flags
 } flags_t;
 
 /**
- * struct pintHandler - struct to choose the right function depending
+ * struct printHandler - struct to choose the right function depending
  * on the format specifier passed to _printf()
  * @c: format specifier
  * @f: pointer to the correct printing function
