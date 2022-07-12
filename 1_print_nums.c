@@ -76,6 +76,10 @@ int count_digit(int i)
 		d++;
 	}
 	return (d);
+<<<<<<< HEAD
+}	
+=======
 }
 
 
+>>>>>>> 0033738feafa058342ac21e5ffede020cf4a3144
