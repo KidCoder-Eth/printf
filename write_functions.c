@@ -1,5 +1,4 @@
 #include "main.h"
-#include <unistd.h>
 /**
  * _putchar - writes the character c to stdout
  * @c: The character to print
@@ -25,7 +24,7 @@ int _putchar(char c)
 	}
 	return (1);
 }
-/*
+/**
  * _puts - prints a string to stdout
  * @str: pointer to the string to print
  * Return: number of chars written
