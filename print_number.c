@@ -44,7 +44,7 @@ int print_number(va_list args)
 
 	if (n < 0)
 	{
-		len += _putchar('-');
+		len += _write_char('-');
 		num = n * -1;
 	}
 	else
