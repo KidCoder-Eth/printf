@@ -17,7 +17,7 @@ int print_bigS(va_list l, flags_t *f)
 
 	(void)f;
 	if (!s)
-		return (_writes("(null)"));
+		return (_puts("(null)"));
 	for (i = 0; s[i]; i++)
 	{
 		if (s[i] > 0 && (s[i] < 32 || s[i] >= 127))
@@ -27,7 +27,7 @@ int print_bigS(va_list l, flags_t *f)
 			res = convert(s[i], 16, 0);
 			if (!res[1])
 				count += _write_char('0');
-			count += _writes(res);
+			count += _puts(res);
 		}
 		else
 			count += _write_char(s[i]);
