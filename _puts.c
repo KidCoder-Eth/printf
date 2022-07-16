@@ -1,11 +1,11 @@
 #include "main.h"
 #include <unistd.h>
 /**
- * _writes - prints a string to stdout
+ * _puts - prints a string to stdout
  * @str: pointer to the string to print
  * Return: number of chars written
  */
-int _writes(char *str)
+int _puts(char *str)
 {
 	register int i;
 
