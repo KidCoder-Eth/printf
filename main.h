@@ -1,46 +1,41 @@
-#ifndef PRINT_F
-#define PRINT_F
-
-#include <unistd.h>
-#include <stdarg.h>
-#include <stdio.h>
-#include <limits.h>
-#include <stdlib.h>
-
+#include "main.h"
 /**
- * struct convert - defines a structure for symbols and functions
- *
- * @sym: The operator
- * @f: The function associ
+ * _putchar - writes the character c to stdout
+ * @c: The character to print
+ * Return: On success 1.
+ * On error, -1 is returned, and errno is set appropriately.
+ * Description: _putchar uses a local buffer of 1024 to call write
+ * as little as possible
  */
-struct convert
+int _putchar(char c)
 {
-	char *sym;
-	int(*f)(va_list);
-};
-typedef struct convert conver_t;
+	static char buf[1024];
+	static int i;
 
-/*Main functions*/
-int parser(const char *format, conver_t f_list[],va_list arg_list);
-int _printf(const char *format, ...);
-int _write_char(char);
-int print_char(va_list);
-int print_string(va_list);
-int print_percent(va_list);
-int print_integer(va_list);
-int print_number(va_list);
-int print_binary(va_list);
-int print_reversed(va_list arg);
-int rot13(va_list);
-int unsigned_integer(va_list);
-int print_octal(va_list list);
-int print_hex(va_list list);
-int print_heX(va_list list);
-/*Helper functions*/
-unsigned int base_len(unsigned int, int);
-char *rev_string(char *);
-void write_base(char *str);
-char *_memcpy(char *dest, char *src, unsigned int n);
-int print_unsgined_number(unsigned int);
-#endif
+	if (c == -1 || i >= 1024)
+	{
+		write(1, &buf, i);
+		i = 0;
+	}
+	if (c != -1)
+	{
+		buf[i] = c;
+		i++;
+	}
+	return (1);
+}
+/**
+ * _puts - prints a string to stdout
+ * @str: pointer to the string to print
+ * Return: number of chars written
+ */
+int _puts(char *str)
+{
+	register int i;
 
+	for (i = 0; str[i] != '\0'; i++)
+		{
+			_putchar(str[i]);
+		}
+	return (i);
+}
